@@ -53,6 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="5jY-3q-3AD" id="8uu-OA-9cC"/>
                         <outlet property="searchDisplayController" destination="Kld-xr-3Sj" id="NQD-mA-vsc"/>
                     </connections>
                 </viewController>
