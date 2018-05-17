@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.1",
+  "iOS" : [
+    {
+      "name" : "VegaScroll",
+      "hash" : "de2b2124da2b594ad8fde43ba4f2fde291904101a6b6e25a382a5fcc1106ee40"
+    }
+  ]
+}
