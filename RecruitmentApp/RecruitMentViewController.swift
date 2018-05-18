@@ -51,18 +51,14 @@ class RecruitMentViewController: UIViewController, UICollectionViewDelegate, UIC
     func loadData() {
         
         Alamofire.request(apiURL).validate().responseJSON {
-            (response) in
-//            guard let dict = response.result.value as? [String: AnyObject] else {
-//                print("dictionary data error")
-//                return
-//            }
-//            guard let dictData = dict["data"] as? [String: AnyObject] else {
-//                print(response.result.error!)
-//                return
-//            }
-//            print(response.value)
+            response in
             let result = try! JSONDecoder().decode(CompanyData.self, from: response.data!)
-            print(result.data[0].company?.name ?? "error")
+            
+            //TODO: TotalPage数に合わせてapiURLのpageを変えて、Cellに反映させる
+            print("TotalPage: \(result._metadata.total_pages)")
+            for i in result.data {
+                print(i.company?.name! ?? "error")
+            }
         }
     }
 

@@ -7,12 +7,11 @@
 //
 
 struct CompanyData: Codable {
-//    let metaData: _metaData
+    let _metadata: _metaData
     let data: [Data]
 }
 
 struct Data: Codable {
-//    let id: Int?
     let title: String?
     let published_at: String?
     let support_count: Int?
@@ -35,15 +34,6 @@ struct Data: Codable {
     let can_support: Bool?
     let supported: Bool?
     let can_bookmark: Bool?
-    
-//    private enum CodingKeys: String, CodingKey {
-//        case id
-//    }
-//
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        id = String(try values.decode(Int.self, forKey: .id))
-//    }
 }
 
 struct _metaData: Codable {
@@ -69,7 +59,6 @@ struct Image: Codable {
 }
 
 struct Company: Codable {
-//    let id: Int?
     let name: String?
     let founder: String?
     let founded_at: String?
@@ -96,7 +85,6 @@ struct Avatar: Codable {
 }
 
 struct Staffings: Codable {
-    let user_id: String?
     let is_leader: Bool?
     let name: String?
     let facebook_uid: String?
