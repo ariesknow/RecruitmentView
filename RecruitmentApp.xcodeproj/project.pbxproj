@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		5027543220AC57A9001E0771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027543120AC57A9001E0771 /* AppDelegate.swift */; };
 		5027543420AC57A9001E0771 /* RecruitMentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027543320AC57A9001E0771 /* RecruitMentViewController.swift */; };
-		5027543720AC57A9001E0771 /* RecruitMentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5027543520AC57A9001E0771 /* RecruitMentView.storyboard */; };
+		5027543720AC57A9001E0771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5027543520AC57A9001E0771 /* Main.storyboard */; };
 		5027543920AC57A9001E0771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5027543820AC57A9001E0771 /* Assets.xcassets */; };
 		5027543C20AC57A9001E0771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5027543A20AC57A9001E0771 /* LaunchScreen.storyboard */; };
 		5027544720AC57A9001E0771 /* RecruitmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027544620AC57A9001E0771 /* RecruitmentAppTests.swift */; };
 		5027545220AC57A9001E0771 /* RecruitmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027545120AC57A9001E0771 /* RecruitmentAppUITests.swift */; };
+		5027546120AD4F59001E0771 /* VegaScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5027546020AD4F59001E0771 /* VegaScroll.framework */; };
+		5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5027546320ADE25D001E0771 /* Alamofire.framework */; };
+		5027546620ADE3D0001E0771 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546520ADE3D0001E0771 /* CollectionViewCell.swift */; };
+		5027546820AEC63B001E0771 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546720AEC63B001E0771 /* APIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 		5027542E20AC57A9001E0771 /* RecruitmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecruitmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5027543120AC57A9001E0771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5027543320AC57A9001E0771 /* RecruitMentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitMentViewController.swift; sourceTree = "<group>"; };
-		5027543620AC57A9001E0771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RecruitMentView.storyboard; sourceTree = "<group>"; };
+		5027543620AC57A9001E0771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5027543820AC57A9001E0771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5027543B20AC57A9001E0771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5027543D20AC57A9001E0771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		5027544D20AC57A9001E0771 /* RecruitmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecruitmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5027545120AC57A9001E0771 /* RecruitmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentAppUITests.swift; sourceTree = "<group>"; };
 		5027545320AC57A9001E0771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5027546020AD4F59001E0771 /* VegaScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VegaScroll.framework; path = Carthage/Build/iOS/VegaScroll.framework; sourceTree = "<group>"; };
+		5027546320ADE25D001E0771 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5027546520ADE3D0001E0771 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5027546720AEC63B001E0771 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5027546120AD4F59001E0771 /* VegaScroll.framework in Frameworks */,
+				5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 				5027544520AC57A9001E0771 /* RecruitmentAppTests */,
 				5027545020AC57A9001E0771 /* RecruitmentAppUITests */,
 				5027542F20AC57A9001E0771 /* Products */,
+				5027545F20AD4F59001E0771 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				5027543120AC57A9001E0771 /* AppDelegate.swift */,
+				5027546720AEC63B001E0771 /* APIModel.swift */,
+				5027546520ADE3D0001E0771 /* CollectionViewCell.swift */,
 				5027543320AC57A9001E0771 /* RecruitMentViewController.swift */,
-				5027543520AC57A9001E0771 /* RecruitMentView.storyboard */,
+				5027543520AC57A9001E0771 /* Main.storyboard */,
 				5027543820AC57A9001E0771 /* Assets.xcassets */,
 				5027543A20AC57A9001E0771 /* LaunchScreen.storyboard */,
 				5027543D20AC57A9001E0771 /* Info.plist */,
@@ -125,6 +138,15 @@
 			path = RecruitmentAppUITests;
 			sourceTree = "<group>";
 		};
+		5027545F20AD4F59001E0771 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5027546320ADE25D001E0771 /* Alamofire.framework */,
+				5027546020AD4F59001E0771 /* VegaScroll.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +157,7 @@
 				5027542A20AC57A8001E0771 /* Sources */,
 				5027542B20AC57A8001E0771 /* Frameworks */,
 				5027542C20AC57A8001E0771 /* Resources */,
+				5027546220AD51BE001E0771 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -234,7 +257,7 @@
 			files = (
 				5027543C20AC57A9001E0771 /* LaunchScreen.storyboard in Resources */,
 				5027543920AC57A9001E0771 /* Assets.xcassets in Resources */,
-				5027543720AC57A9001E0771 /* RecruitMentView.storyboard in Resources */,
+				5027543720AC57A9001E0771 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +277,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5027546220AD51BE001E0771 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VegaScroll.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5027542A20AC57A8001E0771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5027546820AEC63B001E0771 /* APIModel.swift in Sources */,
 				5027543420AC57A9001E0771 /* RecruitMentViewController.swift in Sources */,
 				5027543220AC57A9001E0771 /* AppDelegate.swift in Sources */,
+				5027546620ADE3D0001E0771 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +339,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5027543520AC57A9001E0771 /* RecruitMentView.storyboard */ = {
+		5027543520AC57A9001E0771 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5027543620AC57A9001E0771 /* Base */,
 			);
-			name = RecruitMentView.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		5027543A20AC57A9001E0771 /* LaunchScreen.storyboard */ = {
@@ -428,6 +471,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HAQNZZYPKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RecruitmentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.RecruitmentApp;
@@ -443,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HAQNZZYPKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RecruitmentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.RecruitmentApp;
