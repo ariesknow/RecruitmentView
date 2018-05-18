@@ -12,7 +12,7 @@ class CollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //TODO: Cell内の要素を定義
-        
+        //Title,CompanyImage,CompanyName...
         // cellの枠の太さ
         self.layer.borderWidth = 1.0
         // cellの枠の色
