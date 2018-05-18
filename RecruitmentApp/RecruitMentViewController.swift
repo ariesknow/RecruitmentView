@@ -14,7 +14,11 @@ class RecruitMentViewController: UIViewController, UICollectionViewDelegate, UIC
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let apiURL = "https://www.wantedly.com/api/v1/projects?q="
+    var titles: [String] = []
+    var looking_for: [String] = []
+    
+    
+    let apiURL = "https://www.wantedly.com/api/v1/projects?q=swift&page=0"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +28,8 @@ class RecruitMentViewController: UIViewController, UICollectionViewDelegate, UIC
         layout.minimumLineSpacing = 20
         layout.itemSize = CGSize(width: collectionView.frame.width, height: 87)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        loadData()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,7 +48,23 @@ class RecruitMentViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     //TODO: jsonから表示するデータをperseするメソッド
-    
+    func loadData() {
+        
+        Alamofire.request(apiURL).validate().responseJSON {
+            (response) in
+//            guard let dict = response.result.value as? [String: AnyObject] else {
+//                print("dictionary data error")
+//                return
+//            }
+//            guard let dictData = dict["data"] as? [String: AnyObject] else {
+//                print(response.result.error!)
+//                return
+//            }
+//            print(response.value)
+            let result = try! JSONDecoder().decode(CompanyData.self, from: response.data!)
+            print(result.data[0].company?.name ?? "error")
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
