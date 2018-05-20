@@ -16,8 +16,9 @@
 		5027545220AC57A9001E0771 /* RecruitmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027545120AC57A9001E0771 /* RecruitmentAppUITests.swift */; };
 		5027546120AD4F59001E0771 /* VegaScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5027546020AD4F59001E0771 /* VegaScroll.framework */; };
 		5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5027546320ADE25D001E0771 /* Alamofire.framework */; };
-		5027546620ADE3D0001E0771 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546520ADE3D0001E0771 /* CollectionViewCell.swift */; };
+		5027546620ADE3D0001E0771 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */; };
 		5027546820AEC63B001E0771 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546720AEC63B001E0771 /* APIModel.swift */; };
+		50EE015E20B1BEB400E60058 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EE015D20B1BEB400E60058 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,9 @@
 		5027545320AC57A9001E0771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5027546020AD4F59001E0771 /* VegaScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VegaScroll.framework; path = Carthage/Build/iOS/VegaScroll.framework; sourceTree = "<group>"; };
 		5027546320ADE25D001E0771 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		5027546520ADE3D0001E0771 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5027546720AEC63B001E0771 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		50EE015D20B1BEB400E60058 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			files = (
 				5027546120AD4F59001E0771 /* VegaScroll.framework in Frameworks */,
 				5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */,
+				50EE015E20B1BEB400E60058 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +113,7 @@
 			children = (
 				5027543120AC57A9001E0771 /* AppDelegate.swift */,
 				5027546720AEC63B001E0771 /* APIModel.swift */,
-				5027546520ADE3D0001E0771 /* CollectionViewCell.swift */,
+				5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */,
 				5027543320AC57A9001E0771 /* RecruitMentViewController.swift */,
 				5027543520AC57A9001E0771 /* Main.storyboard */,
 				5027543820AC57A9001E0771 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 		5027545F20AD4F59001E0771 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50EE015D20B1BEB400E60058 /* AlamofireImage.framework */,
 				5027546320ADE25D001E0771 /* Alamofire.framework */,
 				5027546020AD4F59001E0771 /* VegaScroll.framework */,
 			);
@@ -286,6 +290,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/VegaScroll.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);
@@ -303,7 +308,7 @@
 				5027546820AEC63B001E0771 /* APIModel.swift in Sources */,
 				5027543420AC57A9001E0771 /* RecruitMentViewController.swift in Sources */,
 				5027543220AC57A9001E0771 /* AppDelegate.swift in Sources */,
-				5027546620ADE3D0001E0771 /* CollectionViewCell.swift in Sources */,
+				5027546620ADE3D0001E0771 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,13 +27,50 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" id="E8w-So-A5U">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" rowHeight="125" id="E8w-So-A5U" customClass="CustomTableViewCell" customModule="RecruitmentApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E8w-So-A5U" id="MAo-6I-pjI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-SI-QJE">
+                                                    <rect key="frame" x="120" y="10" width="255" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="od3-67-LFf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="BHo-dQ-jRg"/>
+                                                        <constraint firstAttribute="width" constant="100" id="Jvj-tr-SLJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKA-pY-CCL">
+                                                    <rect key="frame" x="120" y="38.5" width="255" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="NYA-SI-QJE" secondAttribute="trailing" id="BUt-4z-OGa"/>
+                                                <constraint firstItem="NYA-SI-QJE" firstAttribute="top" secondItem="MAo-6I-pjI" secondAttribute="top" constant="10" id="ERq-yO-iw7"/>
+                                                <constraint firstItem="ZKA-pY-CCL" firstAttribute="leading" secondItem="od3-67-LFf" secondAttribute="trailing" constant="20" id="M51-yJ-0ow"/>
+                                                <constraint firstItem="od3-67-LFf" firstAttribute="leading" secondItem="MAo-6I-pjI" secondAttribute="leading" id="M8V-6R-IO8"/>
+                                                <constraint firstAttribute="trailing" secondItem="NYA-SI-QJE" secondAttribute="trailing" id="N8G-ch-Wf3"/>
+                                                <constraint firstItem="od3-67-LFf" firstAttribute="top" secondItem="MAo-6I-pjI" secondAttribute="top" id="PGq-Jy-ScT"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZKA-pY-CCL" secondAttribute="trailing" id="jMt-5t-oAa"/>
+                                                <constraint firstItem="ZKA-pY-CCL" firstAttribute="top" secondItem="NYA-SI-QJE" secondAttribute="bottom" constant="8" id="qV6-TB-Uxo"/>
+                                                <constraint firstItem="NYA-SI-QJE" firstAttribute="leading" secondItem="od3-67-LFf" secondAttribute="trailing" constant="20" id="tbQ-cu-VT0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LookingForLabel" destination="ZKA-pY-CCL" id="DRs-DU-zWo"/>
+                                            <outlet property="companyImage" destination="od3-67-LFf" id="Hzm-va-djh"/>
+                                            <outlet property="companyNameLabel" destination="NYA-SI-QJE" id="EP7-KD-NBN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

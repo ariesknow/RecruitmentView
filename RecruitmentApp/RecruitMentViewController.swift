@@ -16,6 +16,7 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
     
     var companyImage: [String] = []
     var companyName: [String] = []
+    var companyLookingFor: [String] = []
     var companyDescription: [String] = []
     var cellCount: Int = 0
     
@@ -31,22 +32,22 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(cellCount)
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
-        if indexPath.row >= companyName.count {
-            cell.textLabel!.text = ""
-            cell.textLabel!.text = ""
-            print(companyName.count)
-        } else {
-            //cellをカスタムして概要や写真を表示
-            cell.textLabel!.text = companyName[indexPath.row]
-//            cell.textLabel!.text = companyDescription[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! CustomTableViewCell
+
+        if indexPath.row < companyName.count {
+            //Doing: cellをカスタムして概要や写真を表示
+            cell.setCell(imageURL: companyImage[indexPath.row], companyNameText: companyName[indexPath.row], lookingForText: companyLookingFor[indexPath.row])
         }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
     
     //TODO: jsonから表示するデータをperseするメソッド
@@ -60,8 +61,9 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             print("TotalPage: \(result._metadata.total_pages)")
             self.cellCount = result._metadata.per_page * result._metadata.total_pages
             for data in result.data {
-                self.companyImage.append(data.image?.original ?? "error")
+                self.companyImage.append(data.company?.avatar?.original ?? "error")
                 self.companyName.append(data.company?.name ?? "error")
+                self.companyLookingFor.append(data.looking_for ?? "error")
                 self.companyDescription.append(data.description ?? "error")
             }
             for i in result.data {
@@ -73,16 +75,12 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             return
         }
     }
-    
-    func getImageFromUrl(sourceUrl: String) -> UIImage? {
-        return nil
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
+
 
