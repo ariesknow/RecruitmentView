@@ -39,7 +39,7 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! CustomTableViewCell
 
         if indexPath.row < companyName.count {
-            //Doing: cellをカスタムして概要や写真を表示
+            //会社ロゴ、会社名、募集人員をCellに表示
             cell.setCell(imageURL: companyImage[indexPath.row], companyNameText: companyName[indexPath.row], lookingForText: companyLookingFor[indexPath.row])
         }
         
@@ -50,7 +50,7 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
         return 100.0
     }
     
-    //TODO: jsonから表示するデータをperseするメソッド
+    //jsonから表示するデータをperse
     func loadData() {
         
         Alamofire.request(apiURL).validate().responseJSON {
@@ -60,18 +60,19 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             //TODO: TotalPage数に合わせてapiURLのpageを変える
             print("TotalPage: \(result._metadata.total_pages)")
             self.cellCount = result._metadata.per_page * result._metadata.total_pages
+            
             for data in result.data {
                 self.companyImage.append(data.company?.avatar?.original ?? "error")
                 self.companyName.append(data.company?.name ?? "error")
                 self.companyLookingFor.append(data.looking_for ?? "error")
                 self.companyDescription.append(data.description ?? "error")
             }
+            //fordebug
             for i in result.data {
                 print(i.company?.name! ?? "error")
             }
             
             self.tableView.reloadData()
-            print("company : \(self.companyDescription.count)" )
             return
         }
     }
