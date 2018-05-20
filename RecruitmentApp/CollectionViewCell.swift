@@ -9,6 +9,10 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var companyImage: UIImageView!
+    @IBOutlet weak var companyName: UILabel!
+    @IBOutlet weak var companyDescription: UILabel!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //TODO: Cell内の要素を定義
