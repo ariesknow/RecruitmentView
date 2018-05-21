@@ -18,6 +18,7 @@
 		5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5027546320ADE25D001E0771 /* Alamofire.framework */; };
 		5027546620ADE3D0001E0771 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */; };
 		5027546820AEC63B001E0771 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546720AEC63B001E0771 /* APIModel.swift */; };
+		502E388020B2D2BD00CBF864 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502E387F20B2D2BD00CBF864 /* DescriptionViewController.swift */; };
 		50EE015E20B1BEB400E60058 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EE015D20B1BEB400E60058 /* AlamofireImage.framework */; };
 		50EE016420B26D9000E60058 /* SCLAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EE016320B26D9000E60058 /* SCLAlertView.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		5027546320ADE25D001E0771 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5027546720AEC63B001E0771 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		502E387F20B2D2BD00CBF864 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		50EE015D20B1BEB400E60058 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		50EE016320B26D9000E60058 /* SCLAlertView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCLAlertView.framework; path = Carthage/Build/iOS/SCLAlertView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				5027543120AC57A9001E0771 /* AppDelegate.swift */,
 				5027546720AEC63B001E0771 /* APIModel.swift */,
 				5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */,
+				502E387F20B2D2BD00CBF864 /* DescriptionViewController.swift */,
 				5027543320AC57A9001E0771 /* RecruitMentViewController.swift */,
 				5027543520AC57A9001E0771 /* Main.storyboard */,
 				5027543820AC57A9001E0771 /* Assets.xcassets */,
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502E388020B2D2BD00CBF864 /* DescriptionViewController.swift in Sources */,
 				5027546820AEC63B001E0771 /* APIModel.swift in Sources */,
 				5027543420AC57A9001E0771 /* RecruitMentViewController.swift in Sources */,
 				5027543220AC57A9001E0771 /* AppDelegate.swift in Sources */,

@@ -61,6 +61,11 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             //TODO: 応募画面へ
             print("応募")
             })
+        popUpView.addButton("詳細を見る") {
+            UserDefaults.standard.set(self.companyName[indexPath.row], forKey: "name")
+            UserDefaults.standard.set(self.companyDescription[indexPath.row], forKey: "description")
+            self.performSegue(withIdentifier: "popup", sender: nil)
+        }
         popUpView.showTitle(companyName[indexPath.row], subTitle: "この会社の求人に応募しますか？", style: .notice, closeButtonTitle: "やめておく...", colorStyle: 0x3D85C6, colorTextButton: 0xFFFF00, animationStyle: .bottomToTop)
     }
     

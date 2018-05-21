@@ -6,9 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Recruit Ment View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -93,6 +101,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="Kld-xr-3Sj" id="NQD-mA-vsc"/>
                         <outlet property="tableView" destination="r5y-Qh-Zg2" id="9iA-9E-TWr"/>
+                        <segue destination="VH8-7e-qJt" kind="presentation" identifier="popup" modalTransitionStyle="crossDissolve" id="Aoo-Sr-sVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,6 +115,93 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="uki-WX-tXJ">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="VH8-7e-qJt" customClass="DescriptionViewController" customModule="RecruitmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="GU6-N4-RHS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-kP-ucB">
+                                <rect key="frame" x="16" y="157" width="343" height="373"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-Kr-T1V">
+                                        <rect key="frame" x="8" y="329" width="147.5" height="36"/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.52156862749999999" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="VdP-ek-arS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="19"/>
+                                        <state key="normal" title="閉じる">
+                                            <color key="titleColor" red="0.95478779077529907" green="0.96730393171310425" blue="0.19368439912796021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapClose:" destination="VH8-7e-qJt" eventType="touchUpInside" id="Kdd-eB-b6v"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="会社の詳細" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-W5-rwA">
+                                        <rect key="frame" x="8" y="58" width="327" height="253"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会社名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQT-Vn-Ah5">
+                                        <rect key="frame" x="8" y="8" width="327" height="42"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMW-Ju-8kz">
+                                        <rect key="frame" x="187.5" y="329" width="147.5" height="36"/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.52156862749999999" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
+                                        <state key="normal" title="応募する！">
+                                            <color key="titleColor" red="0.95478779079999998" green="0.96730393169999995" blue="0.19368439909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapApply:" destination="VH8-7e-qJt" eventType="touchUpInside" id="pdR-2g-ECZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79607843137254897" green="0.94509803921568625" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cMW-Ju-8kz" firstAttribute="top" secondItem="pqK-W5-rwA" secondAttribute="bottom" constant="18" id="40p-3i-Gwz"/>
+                                    <constraint firstItem="uQT-Vn-Ah5" firstAttribute="top" secondItem="jvV-kP-ucB" secondAttribute="top" constant="8" id="AcQ-vq-xWt"/>
+                                    <constraint firstItem="pqK-W5-rwA" firstAttribute="top" secondItem="jvV-kP-ucB" secondAttribute="topMargin" constant="50" id="BJa-Hi-k3u"/>
+                                    <constraint firstAttribute="trailing" secondItem="uQT-Vn-Ah5" secondAttribute="trailing" constant="8" id="FN6-JS-FkM"/>
+                                    <constraint firstItem="aA1-Kr-T1V" firstAttribute="leading" secondItem="jvV-kP-ucB" secondAttribute="leading" constant="8" id="IfL-Dh-Vby"/>
+                                    <constraint firstAttribute="trailing" secondItem="pqK-W5-rwA" secondAttribute="trailing" constant="8" id="Ne6-tT-LZr"/>
+                                    <constraint firstItem="aA1-Kr-T1V" firstAttribute="top" secondItem="pqK-W5-rwA" secondAttribute="bottom" constant="18" id="Nef-97-cvZ"/>
+                                    <constraint firstItem="pqK-W5-rwA" firstAttribute="top" secondItem="uQT-Vn-Ah5" secondAttribute="bottom" constant="8" id="REq-bh-NWR"/>
+                                    <constraint firstItem="aA1-Kr-T1V" firstAttribute="bottom" secondItem="jvV-kP-ucB" secondAttribute="bottom" constant="-8" id="Zx4-8H-T1b"/>
+                                    <constraint firstItem="cMW-Ju-8kz" firstAttribute="leading" secondItem="jvV-kP-ucB" secondAttribute="centerX" constant="16" id="dAi-hg-qo2"/>
+                                    <constraint firstAttribute="bottom" secondItem="cMW-Ju-8kz" secondAttribute="bottom" constant="8" id="k8X-3C-F0R"/>
+                                    <constraint firstItem="aA1-Kr-T1V" firstAttribute="trailing" secondItem="jvV-kP-ucB" secondAttribute="centerX" constant="-16" id="o94-JN-viu"/>
+                                    <constraint firstItem="uQT-Vn-Ah5" firstAttribute="leading" secondItem="jvV-kP-ucB" secondAttribute="leading" constant="8" id="oVE-8Z-Ggh"/>
+                                    <constraint firstItem="pqK-W5-rwA" firstAttribute="leading" secondItem="jvV-kP-ucB" secondAttribute="leading" constant="8" id="sfw-5Q-wmi"/>
+                                    <constraint firstAttribute="trailing" secondItem="cMW-Ju-8kz" secondAttribute="trailing" constant="8" id="vM1-ag-05C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jvV-kP-ucB" firstAttribute="trailing" secondItem="GU6-N4-RHS" secondAttribute="trailingMargin" id="4cZ-ST-GMC"/>
+                            <constraint firstItem="ox6-aE-DqR" firstAttribute="centerY" secondItem="jvV-kP-ucB" secondAttribute="centerY" id="aNK-5x-ejn"/>
+                            <constraint firstItem="jvV-kP-ucB" firstAttribute="leading" secondItem="GU6-N4-RHS" secondAttribute="leadingMargin" id="ekz-AZ-qWS"/>
+                            <constraint firstItem="jvV-kP-ucB" firstAttribute="top" secondItem="ox6-aE-DqR" secondAttribute="top" constant="137" id="unP-Nn-WVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ox6-aE-DqR"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyDescriptionView" destination="pqK-W5-rwA" id="NPG-8N-68q"/>
+                        <outlet property="companyNameLabel" destination="uQT-Vn-Ah5" id="kSF-hr-b9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzG-9p-3JH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
