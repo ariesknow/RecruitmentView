@@ -2,12 +2,12 @@
 
 ## 動作    
 #### gif
-/Users/Yuichiro_Tsuji/Desktop/example.gif 
+example.gif
 
 #### スクリーンショット
-/Users/Yuichiro_Tsuji/Desktop/Simulator\ Screen\ Shot\ -\ iPhone\ 7\ -\ 2018-05-21\ at\ 19.52.49.png 
-/Users/Yuichiro_Tsuji/Desktop/Simulator\ Screen\ Shot\ -\ iPhone\ 7\ -\ 2018-05-21\ at\ 19.57.10.png 
-/Users/Yuichiro_Tsuji/Desktop/Simulator\ Screen\ Shot\ -\ iPhone\ 7\ -\ 2018-05-21\ at\ 19.52.58.png   
+Simulator Screen Shot - iPhone 7 - 2018-05-21 at 19.52.49.png
+Simulator Screen Shot - iPhone 7 - 2018-05-21 at 19.52.58.png
+Simulator Screen Shot - iPhone 7 - 2018-05-21 at 19.57.10.png
 ## 工夫点
 - Cellのカスタマイズ    
 - 応募画面へのフロー及びポップアップUI    
