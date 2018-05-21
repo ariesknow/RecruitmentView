@@ -54,8 +54,10 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //セルの選択解除
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let popUpView = SCLAlertView()
         popUpView.addButton("応募する！", action: {
+            //TODO: 応募画面へ
             print("応募")
             })
         popUpView.showTitle(companyName[indexPath.row], subTitle: "この会社の求人に応募しますか？", style: .notice, closeButtonTitle: "やめておく...", colorStyle: 0x3D85C6, colorTextButton: 0xFFFF00, animationStyle: .bottomToTop)
