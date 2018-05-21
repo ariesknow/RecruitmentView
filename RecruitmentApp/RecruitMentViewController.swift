@@ -20,20 +20,21 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
     var companyLookingFor: [String] = []
     var companyDescription: [String] = []
     var cellCount: Int = 0
+    var totalPages: Int = 1
     
     
-    let apiURL = "https://www.wantedly.com/api/v1/projects?q=swift&page=0"
+    let apiURL = "https://www.wantedly.com/api/v1/projects?q=swift&page="
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        loadData()
+        loadPages()
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.cellCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,7 +44,7 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             //会社ロゴ、会社名、募集人員をCellに表示
             cell.setCell(imageURL: companyImage[indexPath.row], companyNameText: companyName[indexPath.row], lookingForText: companyLookingFor[indexPath.row])
         }
-        
+    
         return cell
     }
     
@@ -64,16 +65,22 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     //jsonから表示するデータをperse
-    func loadData() {
-        
-        Alamofire.request(apiURL).validate().responseJSON {
+    func loadPages() {
+        Alamofire.request(apiURL + String(cellCount)).validate().responseJSON {
             response in
             let result = try! JSONDecoder().decode(CompanyData.self, from: response.data!)
-            
-            //TODO: TotalPage数に合わせてapiURLのpageを変える
-            print("TotalPage: \(result._metadata.total_pages)")
-            self.cellCount = result._metadata.per_page * result._metadata.total_pages
-            
+            self.totalPages = result._metadata.total_pages
+            self.cellCount = result._metadata.total_objects
+            self.tableView.reloadData()
+        }
+        loadData(count: 0)
+    }
+    
+    func loadData(count: Int) {
+        let pages: Int = count + 1
+        Alamofire.request(apiURL + String(pages)).validate().responseJSON {
+            response in
+            let result = try! JSONDecoder().decode(CompanyData.self, from: response.data!)
             for data in result.data {
                 self.companyImage.append(data.company?.avatar?.original ?? "error")
                 self.companyName.append(data.company?.name ?? "error")
@@ -84,9 +91,10 @@ class RecruitMentViewController: UIViewController, UITableViewDelegate, UITableV
             for i in result.data {
                 print(i.company?.name! ?? "error")
             }
-            
             self.tableView.reloadData()
-            return
+            if count != self.totalPages {
+                self.loadData(count: pages)
+            }
         }
     }
 
