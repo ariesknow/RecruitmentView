@@ -1,3 +1,6 @@
 github "AppliKeySolutions/VegaScroll"
 github "Alamofire/Alamofire" ~> 4.7
 github "Alamofire/AlamofireImage" ~> 3.3
+github "vikmeup/SCLAlertView-Swift" "master"
+
+

@@ -19,6 +19,7 @@
 		5027546620ADE3D0001E0771 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */; };
 		5027546820AEC63B001E0771 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027546720AEC63B001E0771 /* APIModel.swift */; };
 		50EE015E20B1BEB400E60058 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EE015D20B1BEB400E60058 /* AlamofireImage.framework */; };
+		50EE016420B26D9000E60058 /* SCLAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EE016320B26D9000E60058 /* SCLAlertView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5027546520ADE3D0001E0771 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5027546720AEC63B001E0771 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		50EE015D20B1BEB400E60058 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		50EE016320B26D9000E60058 /* SCLAlertView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCLAlertView.framework; path = Carthage/Build/iOS/SCLAlertView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5027546120AD4F59001E0771 /* VegaScroll.framework in Frameworks */,
 				5027546420ADE25D001E0771 /* Alamofire.framework in Frameworks */,
 				50EE015E20B1BEB400E60058 /* AlamofireImage.framework in Frameworks */,
+				50EE016420B26D9000E60058 /* SCLAlertView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +147,7 @@
 		5027545F20AD4F59001E0771 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50EE016320B26D9000E60058 /* SCLAlertView.framework */,
 				50EE015D20B1BEB400E60058 /* AlamofireImage.framework */,
 				5027546320ADE25D001E0771 /* Alamofire.framework */,
 				5027546020AD4F59001E0771 /* VegaScroll.framework */,
@@ -291,6 +295,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/VegaScroll.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SCLAlertView.framework",
 			);
 			outputPaths = (
 			);
